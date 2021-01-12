@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width">
+    <title>Tests</title>
+    <link href="tests.css" rel="stylesheet" type="text/css" />
+    <link href="https://fonts.googleapis.com/css2?family=Comfortaa:wght@300&family=Dosis:wght@200&family=Montserrat+Alternates:wght@100&family=Syne+Mono&display=swap" rel="stylesheet">
+  </head>
+  <body>
+    <ul class="main-navigation">
+  <li><a href="/index.html">Home</a></li>
+  <li><a href="#">Upgrades</a>
+    <ul>
+      <li><a href="#" class="center">Hire Hunters</a>
+        <ul>
+          <li><button class="button_two button3" onclick=hirehunters() id="hirehunters" >Hire Hunters($50)</button></li>
+          <li></li>
+        </ul>
+      </li>
+      <li><a href="#">Upgrade Woodcutters</a>
+        <ul>
+          <li><button class="button_two button3" onclick=upgradeproducts() id="u">Upgrade Woodcutters($100)</button></li>
+          <li></li>
+        </ul>
+      </li>
+      <li><a href="#" class="center">Hire Loggers</a>
+        <ul>
+          <li><button class="button_two button3" onclick=hireloggers() id="hireloggers" >Hire Loggers($250)</button></li>
+          <li></li>
+        </ul>
+      </li>
+      <li><a href="#" class="center">Hire Workers</a>
+        <ul>
+          <li><button class="button_two button3" onclick=hireworkers() id="hireworkers" >Hire Workers($1000)</button></li>
+          <li></li>
+        </ul>
+      </li>
+      <li><a href="#" class="center">Special Equipment</a>
+        <ul>
+          <li><button class="button_two button3" onclick=woodgatherer() id="woodgatherer" >Not Unlocked</button></li>
+          <li></li>
+        </ul>
+      </li>
+    </ul>
+  </li>
+  <li><a href="#">Stats</a>
+    <ul>
+      <li><a href="#" class="center">People</a>
+        <ul>
+          <li><button class="button_two button3" id="workers" >Workers: 1</button></li>
+          <li><button class="button_two button3" id="hunters" >Hunters: 0</button></li>
+          <li><button class="button_two button3" id="loggers" >Loggers: 0</button></li>
+          <li><button class="button_two button3" id="morale" >Morale: 100</button></li>
+        </ul>
+      </li>
+      <li><a href="#" class="center">Resources</a>
+        <ul id "resources_here">
+          <li><button class="button_two button3"  id="wood" >Wood: 200/400</button></li>
+          <li><button class="button_two button3" id="meat" >Meat: 75/200</button></li>
+          <li><button class="button_two button3" id="gold" >Not Unlocked</button></li>
+        </ul>
+      </li>
+      <li><a href="#" class="center">Other</a>
+        <ul>
+          <li><button class="button_two button3" id="heat" >60° F</button></li>
+        </ul>
+      </li>
+    </ul>
+  </li>
+  <li><a href="#" ">Marketplace</a>
+    <ul>
+      <li><a href="#" class="center" style="font-size:20px;">Buy</a>
+        <ul>
+          <li><a href="#" class="center">Wood</a>
+            <ul>
+              <li><button class="button_two button3"  id="buy_wood" onclick=buywood() >Buy Wood($3)</button></li>
+            </ul>
+          </li>
+          <li><a href="#" class="center">Meat</a>
+            <ul>
+              <li><button class="button_two button3"  id="buy_meat" onclick=buymeat() >Buy Meat($7)</button></li>
+              <li><button class="button_two button3"  id="buy_meat" onclick=buymaxmeat() >Buy Meat(Max)</button></li>
+            </ul>
+          </li>
+        </ul>
+      </li>
+      <li><a href="#" class="center" style="font-size:20px;">Sell</a>
+        <ul>
+          <li><a href="#" class="center">Wood</a>
+            <ul>
+              <li><button class="button_two button3" id="sellwood" onclick=sellwood()>Sell Wood($1)</button></li>
+              <li><button class="button_two button3"id="sellwood" onclick=sellmaxwood()>Sell Wood (Max)</button></li>
+            </ul>
+          </li>
+          <li><a href="#" class="center">Meat</a>
+            <ul>
+              <li><button class="button_two button3" id="sellmeat" onclick=sellmeat()>Sell Meat($3)</button></li>
+              <li><button class="button_two button3" id="sellmeat" onclick=sellmaxmeat()>Sell Meat(Max)</button></li>
+            </ul>
+          </li>
+        </ul>
+      </li>
+    </ul>
+  <li><a href="#" >Buildings</a>
+    <ul>
+      <li><a href="#" class="center">Storage</a>
+        <ul>
+          <li><button class="button_two button3"  id="buildstorage" onclick=buildstorage() >Wood Storage (150 wood)</button></li>
+          <li><button class="button_two button3"  id="meatstorage" onclick=buildmeatstorage() >Meat Storage (200 wood)</button></li>
+        </ul>
+      </li>
+      <li><a href="#" class="center">Living</a>
+        <ul>
+          <li><button class="button_two button3"  id="buildhut" onclick=buildhut() >Hut (100 wood)</button></li>
+        </ul>
+      </li>
+      <li><a href="#" class="center">Mining</a>
+        <ul>
+          <li><button class="button_two button3"  id="buildmine" onclick=buildmine() >Mine (500 wood)</button></li>
+        </ul>
+      </li>
+      
+    </ul>
+  <li><a href="#" >Events</a>
+   <ul>
+      <li><a href="#" class="center">Community</a>
+        <ul>
+          <li><button class="button_two button3"  onclick=campfire() >Campfire (3 wood)</button></li>
+        </ul>
+      </li>
+
+
+   </ul>
+
+</ul>
+<div>
+<p style="border:3px; border-style:solid; border-color: black; padding: 1em;font-size = 16px; text-align: center;background-color: black;" class="titles" id="p">$0</p>
+<p style="border:3px; border-style:solid; border-color:black; padding: 1em;font-size = 16px; text-align: center;background-color: black;" class="titles" id="town">1 Workers  |  0 Hunters  | 0 Loggers  (1/6)</p>
+<button style="border:1px; border-style:solid; border-color: #D4AF37;padding: 1em;font-size = 16px; text-align: center;width:535px;background-color: black;" class="titles" id="newday" onclick=newday() >Week 0, 1644</button>
+<p style="text-align: center;font-size:18px; background-color: black; color: white;" class"tytles" id="storyline_two"></p>
+<p style="text-align: center;font-size:18px; background-color: black; color: white;" class"tytles" id="storyline"></p>
+    </div>
+    <script src="tests.js"></script>
+  </body>
+</html>
