@@ -1,5 +1,5 @@
 //randomness
-var firstnames = ['Adam', 'Alex', 'Al','Alexander','Aaron','Bradley','Bruce','Brandon','Charles','Carter','Casey','Chase','BOB','Derek','DJ','DuganSter','Eddy','Ethan','Helios','Brother Francis','Builda','John','Peter','Ese','Pablo','Ike','Willis','Walter','Wilt','Quentin','Ted','Ed','Kyle','Marvin','MJ','Rod','Raymond','Richard','George','Gavin','James','Jack'];
+var firstnames = ['Adam', 'Alex', 'Al','Alexander','Aaron','Bradley','Bruce','Brandon','Charles','Carter','Casey','Chase','BOB','Derek','DJ','DuganSter','Eddy','Ethan','Helios','Brother Francis','Builda','John','Peter','Ese','Pablo','Ike','Willis','Walter','Wilt','Quentin','Ted','Ed','Kyle','Marvin','MJ','Rod','Raymond','Richard','George','Gavin','James','Jack','Aahron','James','John ','Robert','Bartholemew','Vilregard Autumnhoof',];
 var lastnames = ['Wilkerson','Quenault','Oreo','Dugan','Hong','Tang','Willis','Owusu','Richmond','Wang','Zhang','Weaver','Banner','Yak','Lumber','Calorone','Qing','Apple','Rich','Young','Brown','Black'];
 var firstname = firstnames[Math.floor(Math.random() * firstnames.length)];
 var lastname = lastnames[Math.floor(Math.random() * lastnames.length)];

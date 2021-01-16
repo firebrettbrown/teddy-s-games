@@ -4,9 +4,7 @@
 }
 .titles {
   background-color: black;
-  width: 500px;
-  padding: 50px;
-  margin: 20px;
+  width: 100%;
   color: white;
   text-align: center;
 } 
@@ -25,12 +23,13 @@
 }
 
 .dropdown {
-  float: left;
+  float:left;
   overflow: hidden;
 }
 
 .dropdown .dropbtn {
-  font-size: 16px;  
+  font-size: 100%;
+  text-align: center;  
   border: none;
   outline: none;
   color: white;

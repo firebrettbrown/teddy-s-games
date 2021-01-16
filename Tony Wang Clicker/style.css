@@ -1,0 +1,41 @@
+body {
+  background-color: green;
+}
+.button {
+  background-color: black;
+  border: none;
+  color: white;
+  padding: 15px 15px;
+  text-align: right;
+  text-decoration: none;
+  display: block;
+  font-size: 14px;
+  margin: 4px 2px;
+  cursor: pointer;
+}
+body {
+  background-image: url(tonywang.png);
+}
+#p {
+  background-color: #333;
+  width: 1240px;
+  padding: 50px;
+  margin: 20px;
+  color: white;
+  text-align: center;
+  align: center;
+} 
+#button {
+  background-color: #333;
+  padding: 30px;
+  margin: 25px;
+  color: white;
+  text-align: center;
+} 
+.aa {
+  background-color: #333;
+  padding: 30px;
+  margin: 25px;
+  color: white;
+  text-align: center;
+} 
