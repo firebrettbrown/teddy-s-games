@@ -1,4 +1,4 @@
-//randomness
+//RANDOMIZERS:
 var firstnames = ['Adam', 'Alex', 'Al','Alexander','Aaron','Bradley','Bruce','Brandon','Charles','Carter','Casey','Chase','BOB','Derek','DJ','DuganSter','Eddy','Ethan','Helios','Brother Francis','Builda','John','Peter','Ese','Pablo','Ike','Willis','Walter','Wilt','Quentin','Ted','Ed','Kyle','Marvin','MJ','Rod','Raymond','Richard','George','Gavin','James','Jack','Aahron','James','John ','Robert','Bartholemew','Vilregard Autumnhoof',];
 var lastnames = ['Wilkerson','Quenault','Oreo','Dugan','Hong','Tang','Willis','Owusu','Richmond','Wang','Zhang','Weaver','Banner','Yak','Lumber','Calorone','Qing','Apple','Rich','Young','Brown','Black'];
 var firstname = firstnames[Math.floor(Math.random() * firstnames.length)];
@@ -11,6 +11,13 @@ var randomevent_3 = Math.floor(Math.random() * 5) + 1;
 var randomevent_4 = Math.floor(Math.random() * 150) + 5; 
 var randomevent_5 = Math.floor(Math.random() * 150) + 5; 
 var randomevent_6 = Math.floor(Math.random() * 150) + 5; 
+
+//how the function works:
+// Math.floor(Math.random)() * ending month - starting month) + starting month;
+
+
+//if I wanted the ranges to be between 3 and 22 months, I would do:
+// Math.floor(Math.random() * 19) + 3;
 
 
 //randomgains&losses
@@ -117,8 +124,12 @@ function newday(){
    if (day==randomevent_3){
     document.getElementById("storyline").innerHTML="Week "+randomevent_3+": People from the town here about your town and buy some wood";
     wood-=10;
-    x+=20;
+    x+=lv*10;
     textUpdate();
+   }
+   if (day==randomevent_4){
+    document.getElementById("storyline").innerHTML="Week "+randomevent_4+": A worker accidentally fell into a swamp that happened to be infested with lazer shooting flying crocodiles. He died.";
+    loseworker();
    }
    if (day>=10 && x>=100000){
     document.getElementById("woodgatherer").innerHTML="Wood Gatherer($"+woodgatherercost+")";
@@ -360,4 +371,13 @@ function meatgatherer(){
     }
 }, 100)
   }
+}
+function loseworker(){
+  lv/=2;
+  lv2/=2;
+  workers-=1;
+  townspeople-=1;
+  meatconsuption+=1;
+  document.getElementById("workers").innerHTML="Workers: "+workers;
+  textUpdate();
 }
